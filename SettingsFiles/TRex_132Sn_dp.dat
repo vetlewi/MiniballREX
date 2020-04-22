@@ -1,0 +1,141 @@
+################################################################################
+# Primary generator
+################################################################################
+PrimaryGenerator:	AngularDistribution
+#PrimaryGenerator:	gammaSource
+LevelFile:		../LevelFiles/66Ni_dp.dat
+AngularDistributionFile:	../AngularDistributionFiles/66Ni_dp.dat
+MassFile: ../MassFile.dat
+
+gammaEnergy:	2000
+
+# energy of the beam
+#BeamEnergy:		1320.0		in MeV
+#BeamEnergy:		792.0		in MeV
+BeamEnergy:	294.70325	in MeCV
+BeamWidth:		0.0		in mm
+ 
+#ProjectileName:		132Sn
+#ProjectileZ:		50
+#ProjectileA:		132
+ProjectileName:	66Ni
+ProjectileZ:	28
+ProjectileA:	66
+
+TargetName:		2H
+TargetZ:		1
+TargetA:		2
+
+#EjectileName:		133Sn
+#EjectileZ:		50
+#EjectileA:		133
+
+#RecoilName:		1H
+#RecoilZ:		1
+#RecoilA:		1
+
+EjectileName:	1H
+EjectileZ:	1
+EjectileA:	1
+
+RecoilName: 67Ni
+RecoilZ: 28
+RecoilA: 67
+
+TargetMaterialName:	DeuteratedPE
+
+TargetThickness:	0.667		in mg/cm2
+TargetMaterialDensity:	0.92		in g/cm3
+
+TransferOrCoulexProbability:	1.0
+
+SimulateGammas:		1
+IncludeEnergyResolution:	0
+
+IncludeVacuumChamber:		1
+VacuumChamberType:		sphere
+UseVisualizationCut:		0
+
+
+################################################################################
+# Detectors
+################################################################################
+UseFCDdeltaE:		1
+UseFCDErest:		1
+
+UseBCDdeltaE:		0
+UseBCDErest:		0
+
+UseFBarrelDeltaE:	0
+UseFBarrelErest:	0
+
+UseBBarrelDeltaE:	0
+UseBBarrelErest:	0
+
+
+FBarrelDeltaESinglesStripWidth:	0.390625 #3.125 #1.5625	#0.78125 #0.390625
+BBarrelDeltaESinglesStripWidth:	0.390625 #3.125 #1.5625	#0.78125 #0.390625
+
+FBarrelDeltaESinglesFoilThickness: 11.57	in um
+FCDDeltaESinglesFoilThickness: 11.57	in um
+
+FCDdeltaESingles.0.Z:	21.9
+FCDdeltaESingles.1.Z:	21.9
+FCDdeltaESingles.2.Z:	21.9
+FCDdeltaESingles.3.Z:	21.9
+
+FCDErestSingles.0.Z:	30.4
+FCDErestSingles.1.Z:	30.4
+FCDErestSingles.2.Z:	30.4
+FCDErestSingles.3.Z:	30.4
+
+
+BBarrelDeltaESingles.0.Thickness: 50  	in um
+BBarrelDeltaESingles.1.Thickness: 50  	in um
+BBarrelDeltaESingles.2.Thickness: 50  	in um
+BBarrelDeltaESingles.3.Thickness: 50  	in um
+
+
+NbOfMiniballClusters:		    8
+MiniballCluster.Rho.0:		110.  
+MiniballCluster.Rho.1:		110.  
+MiniballCluster.Rho.2:		110.  
+MiniballCluster.Rho.3:		110.  
+MiniballCluster.Rho.4:		110.  
+MiniballCluster.Rho.5:		110.  
+MiniballCluster.Rho.6:		110.  
+MiniballCluster.Rho.7:		110. 
+ 
+MiniballCluster.Theta.0:	125.
+MiniballCluster.Theta.5:	125.
+MiniballCluster.Theta.1:	67.
+MiniballCluster.Theta.6:	67.
+MiniballCluster.Theta.2:	67.
+MiniballCluster.Theta.4:	67.
+MiniballCluster.Theta.3:	125.
+MiniballCluster.Theta.7:	125.
+
+MiniballCluster.Phi.0:		320. 
+MiniballCluster.Phi.5:		220. 
+MiniballCluster.Phi.1:		320. 
+MiniballCluster.Phi.6:		220. 
+MiniballCluster.Phi.2:		40. 
+MiniballCluster.Phi.4:		140. 
+MiniballCluster.Phi.3:		40. 
+MiniballCluster.Phi.7:		140. 
+
+MiniballCluster.Spin.0:		0. 
+MiniballCluster.Spin.1:		0. 
+MiniballCluster.Spin.2:		0. 
+MiniballCluster.Spin.3:		0. 
+MiniballCluster.Spin.4:		0. 
+MiniballCluster.Spin.5:		0. 
+MiniballCluster.Spin.6:		0. 
+MiniballCluster.Spin.7:		0. 
+
+################################################################################
+# Visualization
+################################################################################
+SetColours:		1
+
+end

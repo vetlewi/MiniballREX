@@ -1,0 +1,206 @@
+################################################################################
+# Primary generator
+################################################################################
+PrimaryGenerator:	AngularDistribution
+LevelFile:		/home/bwach/transfer/miniball/simulation/LevelFiles/132Sn_dp.dat
+AngularDistributionFile:	/home/bwach/transfer/miniball/simulation/AngularDistributionFiles/132Sn_dp.dat
+
+# energy of the beam
+BeamEnergy:		792.0		in MeV
+BeamWidth:	1.0		in mm
+ 
+ProjectileName:		132Sn
+ProjectileZ:		50
+ProjectileA:		132
+
+TargetName:		2H
+TargetZ:		1	
+TargetA:		2
+
+EjectileName:		133Sn
+EjectileZ:		50
+EjectileA:		133
+
+RecoilName:		1H
+RecoilZ:		1
+RecoilA:		1
+
+
+TargetMaterialName:	solidDeuterium
+TargetDiameter:		5.0		in mm            
+
+TargetThickness:	162.3e-3		in mg/cm2	 (10um=162.4e-3; 50um=812.0e-3)
+TargetMaterialDensity:	0.1624		in g/cm3	 	
+GasTargetLength:	1e-3		in cm		(10um=1e-3cm)
+
+TransferOrCoulexProbability:	1.0
+
+SimulateGammas:		0
+IncludeEnergyResolution:	0
+
+IncludeVacuumChamber:		0
+VacuumChamberType:		cylinder
+UseVisualizationCut:		0
+
+WriteAllEvents:			1
+
+################################################################################
+# Detectors
+################################################################################
+UseFBarrelDeltaE:	1
+UseSecondFBarrelDeltaE:	1
+UseFBarrelErest:	1
+
+UseBBarrelDeltaE:	1
+UseSecondBBarrelDeltaE:	1
+UseBBarrelErest:	1
+
+ConstructPCB:		0
+
+FBarrelDeltaESinglesStripWidth:	0.1	in mm		#pitch size of first layer forward
+SecondFBarrelDeltaESinglesStripWidth:	0.1 		#pitch size of second layer forward
+  
+BBarrelDeltaESinglesStripWidth:	0.1
+SecondBBarrelDeltaESinglesStripWidth:	0.1
+
+FBarrelDeltaESinglesFoilThickness: 5.0		in um		#foil thickness
+BBarrelDeltaESinglesFoilThickness: 5.0 		in um
+
+
+NbOfFBarrelDeltaESingles: 4		#no of detector panels 
+NbOfSecondFBarrelDeltaESingles: 4
+NbOfFBarrelErestSingles: 4
+
+NbOfBBarrelDeltaESingles: 4
+NbOfSecondBBarrelDeltaESingles: 4
+NbOfBBarrelErestSingles: 4
+
+
+##################################first layer###################################
+FBarrelDeltaESingles.0.Z:      40 	 in mm		#position of the centre forward
+FBarrelDeltaESingles.1.Z:      40	 
+FBarrelDeltaESingles.2.Z:      40	 
+FBarrelDeltaESingles.3.Z:      40	 
+FBarrelDeltaESingles.0.DistanceToBeam: 10.0	in mm	#distance of first layer to beam axis
+FBarrelDeltaESingles.1.DistanceToBeam: 10.0	in mm
+FBarrelDeltaESingles.2.DistanceToBeam: 10.0	in mm
+FBarrelDeltaESingles.3.DistanceToBeam: 10.0	in mm
+
+FBarrelDeltaESingles.0.Thickness: 140  	in um		#thickness of first layer
+FBarrelDeltaESingles.1.Thickness: 140	in um
+FBarrelDeltaESingles.2.Thickness: 140	in um
+FBarrelDeltaESingles.3.Thickness: 140	in um
+
+FBarrelDeltaESinglesLength.X: 19.0	in mm		#dimensions of each detector panel in the first layer
+FBarrelDeltaESinglesLength.Y: 80.0
+
+
+###############################second layer####################################
+SecondFBarrelDeltaESingles.0.Z:	40 	in mm
+SecondFBarrelDeltaESingles.1.Z:	40	
+SecondFBarrelDeltaESingles.2.Z:	40	
+SecondFBarrelDeltaESingles.3.Z:	40	
+SecondFBarrelDeltaESingles.0.DistanceToBeam: 11.0	in mm
+SecondFBarrelDeltaESingles.1.DistanceToBeam: 11.0	in mm
+SecondFBarrelDeltaESingles.2.DistanceToBeam: 11.0	in mm
+SecondFBarrelDeltaESingles.3.DistanceToBeam: 11.0	in mm
+
+SecondFBarrelDeltaESingles.0.Thickness: 140  	in um
+SecondFBarrelDeltaESingles.1.Thickness: 140  	in um
+SecondFBarrelDeltaESingles.2.Thickness: 140  	in um
+SecondFBarrelDeltaESingles.3.Thickness: 140  	in um
+
+SecondFBarrelDeltaESinglesLength.X: 21.0	in mm
+SecondFBarrelDeltaESinglesLength.Y: 80.0
+
+
+################################third layer#####################################
+FBarrelErestSingles.0.Z:	40	in mm
+FBarrelErestSingles.1.Z:	40
+FBarrelErestSingles.2.Z:	40
+FBarrelErestSingles.3.Z:	40	
+FBarrelErestSingles.0.DistanceToBeam: 12.5	in mm
+FBarrelErestSingles.1.DistanceToBeam: 12.5	in mm
+FBarrelErestSingles.2.DistanceToBeam: 12.5	in mm
+FBarrelErestSingles.3.DistanceToBeam: 12.5	in mm
+
+
+FBarrelErestSingles.0.Thickness: 2000  	in um
+FBarrelErestSingles.1.Thickness: 2000
+FBarrelErestSingles.2.Thickness: 2000
+FBarrelErestSingles.3.Thickness: 2000
+
+
+FBarrelErestSinglesLength.X: 23.0	in mm
+FBarrelErestSinglesLength.Y: 80.0
+
+
+
+################################################################################
+BBarrelDeltaESingles.0.Z:      -40 	 
+BBarrelDeltaESingles.1.Z:      -40	 
+BBarrelDeltaESingles.2.Z:      -40	 
+BBarrelDeltaESingles.3.Z:      -40	 
+BBarrelDeltaESingles.0.DistanceToBeam: 10.0	in mm
+BBarrelDeltaESingles.1.DistanceToBeam: 10.0	in mm
+BBarrelDeltaESingles.2.DistanceToBeam: 10.0	in mm
+BBarrelDeltaESingles.3.DistanceToBeam: 10.0	in mm
+
+BBarrelDeltaESingles.0.Thickness: 140  	in um
+BBarrelDeltaESingles.1.Thickness: 140	in um
+BBarrelDeltaESingles.2.Thickness: 140	in um
+BBarrelDeltaESingles.3.Thickness: 140	in um
+
+BBarrelDeltaESinglesLength.X: 19.0	in mm
+BBarrelDeltaESinglesLength.Y: 80.0
+
+
+################################################################################
+SecondBBarrelDeltaESingles.0.Z:	-40 	
+SecondBBarrelDeltaESingles.1.Z:	-40	
+SecondBBarrelDeltaESingles.2.Z:	-40	
+SecondBBarrelDeltaESingles.3.Z:	-40	
+SecondBBarrelDeltaESingles.0.DistanceToBeam: 11.0	in mm
+SecondBBarrelDeltaESingles.1.DistanceToBeam: 11.0	in mm
+SecondBBarrelDeltaESingles.2.DistanceToBeam: 11.0	in mm
+SecondBBarrelDeltaESingles.3.DistanceToBeam: 11.0	in mm
+
+SecondBBarrelDeltaESingles.0.Thickness: 140  	in um
+SecondBBarrelDeltaESingles.1.Thickness: 140 	in um
+SecondBBarrelDeltaESingles.2.Thickness: 140	in um
+SecondBBarrelDeltaESingles.3.Thickness: 140	in um
+
+SecondBBarrelDeltaESinglesLength.X: 21.0	in mm
+SecondBBarrelDeltaESinglesLength.Y: 80.0
+
+################################################################################
+
+BBarrelErestSingles.0.Z:	-40	in mm
+BBarrelErestSingles.1.Z:	-40
+BBarrelErestSingles.2.Z:	-40
+BBarrelErestSingles.3.Z:	-40	
+BBarrelErestSingles.0.DistanceToBeam: 12.5	in mm
+BBarrelErestSingles.1.DistanceToBeam: 12.5	in mm
+BBarrelErestSingles.2.DistanceToBeam: 12.5	in mm
+BBarrelErestSingles.3.DistanceToBeam: 12.5	in mm
+
+
+BBarrelErestSingles.0.Thickness: 2000  	in um
+BBarrelErestSingles.1.Thickness: 2000
+BBarrelErestSingles.2.Thickness: 2000
+BBarrelErestSingles.3.Thickness: 2000
+
+
+BBarrelErestSinglesLength.X: 23.0	in mm
+BBarrelErestSinglesLength.Y: 80.0
+
+
+
+NbOfMiniballClusters:		    0
+
+################################################################################
+# Visualization
+################################################################################
+SetColours:		1
+
+end

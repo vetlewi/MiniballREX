@@ -1,0 +1,118 @@
+
+
+# Primary generator
+PrimaryGenerator: gammaSource
+
+gammaEnergy: 1332
+
+IncludeVacuumChamber:		1
+VacuumChamberType:		sphere
+UseVisualizationCut:		0
+
+SimulateGammas:		1
+IncludeEnergyResolution:	0
+
+WriteAllEvents:			1
+
+# Detectors
+
+UseFCDdeltaE:		1
+UseFCDErest:		1
+
+UseBCDdeltaE:		1
+UseBCDErest:		0
+
+UseFBarrelDeltaE:	0
+UseFBarrelErest:	0
+
+UseBBarrelDeltaE:	1
+UseBBarrelErest:	1
+
+FBarrelDeltaESinglesStripWidth:	0.390625
+BBarrelDeltaESinglesStripWidth:	0.390625
+
+FBarrelDeltaESinglesFoilThickness: 11.57	in um
+FCDDeltaESinglesFoilThickness: 11.57
+
+FCDdeltaESingles.0.Z:	21.9
+FCDdeltaESingles.1.Z:	21.9
+FCDdeltaESingles.2.Z:	21.9
+FCDdeltaESingles.3.Z:	21.9
+
+FCDErestSingles.0.Z:	30.4
+FCDErestSingles.1.Z:	30.4
+FCDErestSingles.2.Z:	30.4
+FCDErestSingles.3.Z:	30.4
+
+BBarrelDeltaESingles.0.Thickness: 50  	in um
+BBarrelDeltaESingles.1.Thickness: 50  	in um
+BBarrelDeltaESingles.2.Thickness: 50  	in um
+BBarrelDeltaESingles.3.Thickness: 50  	in um
+
+NbOfMiniballClusters:		    6
+MiniballCluster.Rho.0:		120.  
+MiniballCluster.Rho.1:		120.  
+MiniballCluster.Rho.2:		120.  
+MiniballCluster.Rho.3:		120.  
+MiniballCluster.Rho.4:		120.  
+MiniballCluster.Rho.5:		120.
+
+MiniballCluster.Theta.0:	63.5
+MiniballCluster.Theta.1:	63.5
+MiniballCluster.Theta.2:	101.
+MiniballCluster.Theta.3:	98.5
+MiniballCluster.Theta.4:	55.5
+MiniballCluster.Theta.5:	55.5
+
+MiniballCluster.Phi.0:		148.25
+MiniballCluster.Phi.1:		228.
+MiniballCluster.Phi.2:		187.5
+MiniballCluster.Phi.3:		352.5
+MiniballCluster.Phi.4:		312.
+MiniballCluster.Phi.5:		31.75
+
+MiniballCluster.Spin.0:		0. 
+MiniballCluster.Spin.1:		0. 
+MiniballCluster.Spin.2:		55. 
+MiniballCluster.Spin.3:		0. 
+MiniballCluster.Spin.4:		0. 
+MiniballCluster.Spin.5:		0. 
+
+NbOfLaBrDetectors:	6
+LaBrDetector.Rho.0:	200.
+LaBrDetector.Rho.1:	200.
+LaBrDetector.Rho.2:	200.
+LaBrDetector.Rho.3:	200.
+LaBrDetector.Rho.4:	200.
+LaBrDetector.Rho.5:	200.
+
+#LaBrDetector.Theta.0:	127.
+LaBrDetector.Theta.0:	146.5
+#LaBrDetector.Theta.1:	154.
+LaBrDetector.Theta.1:	146.5
+#LaBrDetector.Theta.2:	140.
+LaBrDetector.Theta.2:	146.5
+#LaBrDetector.Theta.3:	127.
+LaBrDetector.Theta.3:	154.
+#LaBrDetector.Theta.4:	146.5
+LaBrDetector.Theta.4:	154.
+#LaBrDetector.Theta.5:	136.5
+LaBrDetector.Theta.5:	154.
+
+#LaBrDetector.Phi.0:	201.5
+LaBrDetector.Phi.0:	41.
+#LaBrDetector.Phi.1:	265.5
+LaBrDetector.Phi.1:	94.
+#LaBrDetector.Phi.2:	325.
+LaBrDetector.Phi.2:	120.
+#LaBrDetector.Phi.3:	30.
+LaBrDetector.Phi.3:	302.
+#LaBrDetector.Phi.4:	97
+LaBrDetector.Phi.4:	268.
+#LaBrDetector.Phi.5:	136.5	
+LaBrDetector.Phi.5:	240
+
+# Visualization
+SetColours:		1
+
+end
