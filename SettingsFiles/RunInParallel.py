@@ -45,6 +45,6 @@ if __name__ == '__main__':
 	for val in range(200, 10100, 200):
 		energies.append(val)
 	def Run(e):
-		RunMiniballTREX(e, 1000, "GammaSource_Efficency_66Ni_dp.dat")
+		RunMiniballTREX(e, num_events, "GammaSource_Efficency_66Ni_dp.dat")
 	p = Pool(28)
 	p.map(Run, energies)
