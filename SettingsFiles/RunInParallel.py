@@ -30,6 +30,7 @@ def RunMiniballTREX(energy, number_of_gammas, template):
 
 	GenerateConfigFile(conf_file, template, energy)
 	os.system("./MiniballTRex -f %s -s %s -n %d > %s" % (res_file, conf_file, number_of_gammas, log_file))
+	print("Energy %d: Finished" % energy)
 
 
 if __name__ == '__main__':
