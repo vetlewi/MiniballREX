@@ -20,13 +20,14 @@ def GenerateConfigFile(outname, in_name, gamma_e):
 def RunMiniballTREX(energy, number_of_gammas, template):
 
 	# First we generate a folder to store the input and result
-	work_folder = "Eg_%f" % energy
-	res_file = work_folder + "Eg%d" % (int(energy))
+	work_folder = "Eg_%d" % energy
+	res_file = work_folder + "/Eg%d.root" % (int(energy))
 	conf_file = work_folder + "/config.dat"
+	log_file = work_folder + "/log.txt"
 	os.system("mkdir %s" % work_folder)
 
 	GenerateConfigFile(conf_file, template, energy)
-	os.system("./MiniballTRex -f %s -s %s -n %d" % (res_file, conf_file, number_of_gammas))
+	os.system("./MiniballTRex -f %s -s %s -n %d > %s" % (res_file, conf_file, number_of_gammas, log_file))
 
 
 if __name__ == '__main__':
