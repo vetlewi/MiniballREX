@@ -1,13 +1,13 @@
 import os
 from multiprocessing import Pool
 
-def GenerateConfigFile(outname, template, gamma_e):
+def GenerateConfigFile(outname, in_name, gamma_e):
 	"""
 	Generates a config file from a template
 	"""
 
 	outfile = open(outname, "w")
-	template_file = open(input_name, "r")
+	template_file = open(in_name, "r")
 	template = template_file.readlines()
 	template_file.close()
 
