@@ -46,5 +46,6 @@ if __name__ == '__main__':
 		energies.append(val)
 	def Run(e):
 		RunMiniballTREX(e, num_events, "GammaSource_Efficency_66Ni_dp.dat")
-	p = Pool(28)
+	print("Running MiniballREX with %s with %s processes" % (num_events, os.cpu_count()))
+	p = Pool(os.cpu_count())
 	p.map(Run, energies)
