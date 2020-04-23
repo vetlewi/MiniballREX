@@ -140,7 +140,7 @@ void TRexEventAction::MiniballEndOfEventAction(const G4Event* evt) {
 
 	}// loop over all detectors
 
-	fMbHistoMan->AddGaussian();
+	//fMbHistoMan->AddGaussian();
 }
 
 void TRexEventAction::CollectDataFromDetectors() {

@@ -1440,8 +1440,8 @@ void MiniBallHistoManager::StartOfEvent()
 
 void MiniBallHistoManager::EndOfEvent()
 {
-  if(WriteGaussian)
-    AddGaussian();
+  //if(WriteGaussian)
+  //  AddGaussian();
   if(ElectronicThreshold)
     SetCutoff();
   FillMBHisto();
