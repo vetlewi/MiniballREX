@@ -1,3 +1,4 @@
+import sys
 import os
 from multiprocessing import Pool
 
@@ -31,6 +32,14 @@ def RunMiniballTREX(energy, number_of_gammas, template):
 
 
 if __name__ == '__main__':
+	num_events = 1000
+	if len(sys.argv) == 2:
+		try:
+			num_events = int(sys.argv[1])
+		except:
+			print("Unable to understand number of events, try again.")
+			exit(-1)
+
 	energies = [100]
 	for val in range(200, 10100, 200):
 		energies.append(val)
