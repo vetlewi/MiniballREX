@@ -75,7 +75,7 @@ void TRexEventAction::EndOfEventAction(const G4Event* evt) {
 
 	// periodic printing
 	G4int event_id = evt->GetEventID();
-
+    // TODO: Change for a progressbar
 	if(event_id < 100) {
 		std::cout<<">>> Event "<<evt->GetEventID()<<"\r"<<std::flush;
 	} else if(event_id == 100 || event_id%1000 == 0) {

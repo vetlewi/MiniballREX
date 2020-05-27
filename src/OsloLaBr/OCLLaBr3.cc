@@ -301,9 +301,10 @@ void OCLLaBr3::SetPosition(G4ThreeVector thisPos) {
   G4cout << " ----> A OCLLaBr3 will be placed at distance: " << translatePos/mm << " mm" << G4endl;
 }
 
-void OCLLaBr3::SetTransform(G4Transform3D tranf)
+void OCLLaBr3:: SetTransform(G4Transform3D tranf)
 {
     transform = tranf;
+    std::cout << "test";
 }
 
 

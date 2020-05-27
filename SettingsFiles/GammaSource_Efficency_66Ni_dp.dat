@@ -2,7 +2,7 @@
 # Primary generator
 PrimaryGenerator: gammaSource
 
-gammaEnergy: 1332
+gammaEnergy: 800
 
 IncludeVacuumChamber:		1
 VacuumChamberType:		sphere
@@ -18,7 +18,7 @@ WriteAllEvents:			1
 UseFCDdeltaE:		1
 UseFCDErest:		1
 
-UseBCDdeltaE:		1
+UseBCDdeltaE:		0
 UseBCDErest:		0
 
 UseFBarrelDeltaE:	0
@@ -59,57 +59,46 @@ MiniballCluster.Rho.5:		120.
 MiniballCluster.Theta.0:	63.5
 MiniballCluster.Theta.1:	63.5
 MiniballCluster.Theta.2:	101.
-MiniballCluster.Theta.3:	98.5
+MiniballCluster.Theta.3:	99.5
 MiniballCluster.Theta.4:	55.5
 MiniballCluster.Theta.5:	55.5
 
 MiniballCluster.Phi.0:		148.25
 MiniballCluster.Phi.1:		228.
 MiniballCluster.Phi.2:		187.5
-MiniballCluster.Phi.3:		352.5
+#MiniballCluster.Phi.3:		352.5
+MiniballCluster.Phi.3:		357.5
 MiniballCluster.Phi.4:		312.
 MiniballCluster.Phi.5:		31.75
 
 MiniballCluster.Spin.0:		0. 
 MiniballCluster.Spin.1:		0. 
 MiniballCluster.Spin.2:		55. 
-MiniballCluster.Spin.3:		0. 
-MiniballCluster.Spin.4:		0. 
+MiniballCluster.Spin.3:		65. 
+MiniballCluster.Spin.4:		45. 
 MiniballCluster.Spin.5:		0. 
 
-NbOfLaBrDetectors:	6
-LaBrDetector.Rho.0:	200.
-LaBrDetector.Rho.1:	200.
-LaBrDetector.Rho.2:	200.
-LaBrDetector.Rho.3:	200.
-LaBrDetector.Rho.4:	200.
-LaBrDetector.Rho.5:	200.
+NbOfLaBrDetectors: 6
+LaBrDetector.Rho.0:	250.
+LaBrDetector.Rho.1:	250.
+LaBrDetector.Rho.2:	250.
+LaBrDetector.Rho.3:	250.
+LaBrDetector.Rho.4:	250.
+LaBrDetector.Rho.5:	250.
 
-#LaBrDetector.Theta.0:	127.
-LaBrDetector.Theta.0:	146.5
-#LaBrDetector.Theta.1:	154.
-LaBrDetector.Theta.1:	146.5
-#LaBrDetector.Theta.2:	140.
-LaBrDetector.Theta.2:	146.5
-#LaBrDetector.Theta.3:	127.
-LaBrDetector.Theta.3:	154.
-#LaBrDetector.Theta.4:	146.5
-LaBrDetector.Theta.4:	154.
-#LaBrDetector.Theta.5:	136.5
-LaBrDetector.Theta.5:	154.
+LaBrDetector.Theta.0:	-56.5
+LaBrDetector.Theta.1:	-56.5
+LaBrDetector.Theta.2:	-56.5
+LaBrDetector.Theta.3:	64.0
+LaBrDetector.Theta.4:	64.0
+LaBrDetector.Theta.5:	64.0
 
-#LaBrDetector.Phi.0:	201.5
-LaBrDetector.Phi.0:	41.
-#LaBrDetector.Phi.1:	265.5
-LaBrDetector.Phi.1:	94.
-#LaBrDetector.Phi.2:	325.
-LaBrDetector.Phi.2:	120.
-#LaBrDetector.Phi.3:	30.
-LaBrDetector.Phi.3:	302.
-#LaBrDetector.Phi.4:	97
-LaBrDetector.Phi.4:	268.
-#LaBrDetector.Phi.5:	136.5	
-LaBrDetector.Phi.5:	240
+LaBrDetector.Phi.0:	136
+LaBrDetector.Phi.1:	184
+LaBrDetector.Phi.2:	210
+LaBrDetector.Phi.3: 32
+LaBrDetector.Phi.4: -2
+LaBrDetector.Phi.5: -30
 
 # Visualization
 SetColours:		1

@@ -40,20 +40,24 @@ void OsloLaBr3DetectorArray::GetTransformations(std::vector<G4double> &p_rho,
     {
         G4RotationMatrix cluster_rotation;
         //cluster_rotation.rotateZ(p_spin[clust]);
-        //cluster_rotation.rotateX(M_PI);
+        cluster_rotation.rotateX(M_PI);
+        cluster_rotation.rotateY(M_PI/2.);
+
+        cluster_rotation.rotateZ(p_phi[clust]);
         cluster_rotation.rotateY(p_theta[clust]);
-        cluster_rotation.rotateZ(p_phi[clust]+90.*degree);
+
 
 
         G4double trans_mag = p_rho[clust]+detectorHalfinclPMT;
+        G4ThreeVector cluster_translation(trans_mag, 0., 0.);
+        //G4ThreeVector cluster_translation(0., 0., 0.);//trans_mag);
+        //G4ThreeVector cluster_translation(trans_mag*cos(p_phi[clust]+90.*degree)*sin(p_theta[clust]),
+        //                                  trans_mag*sin(p_phi[clust]+90.*degree)*sin(p_theta[clust]),
+        //                                  trans_mag*cos(p_theta[clust]));
 
-        //G4ThreeVector cluster_translation(0., 0., trans_mag);
-        G4ThreeVector cluster_translation(trans_mag*cos(p_phi[clust]+90.*degree)*sin(p_theta[clust]),
-                                          trans_mag*sin(p_phi[clust]+90.*degree)*sin(p_theta[clust]),
-                                          trans_mag*cos(p_theta[clust]));
 
-        //cluster_translation.rotateY(p_theta[clust]);
-        //cluster_translation.rotateZ(p_phi[clust]);
+        cluster_translation.rotateZ(p_phi[clust]);
+        cluster_translation.rotateY(p_theta[clust]);
 
         G4Transform3D cluster_transformation(cluster_rotation,
                                              cluster_translation);
@@ -72,17 +76,12 @@ G4VPhysicalVolume* OsloLaBr3DetectorArray::Construct()
     }
 
     for ( auto i = 0 ; i < nb_of_detectors ; ++i ){
-        G4RotationMatrix rot;
-        rot.rotateY(theta[i]);
-        rot.rotateZ(phi[i]);
 
         G4ThreeVector pos = SpherToCatG4three(rho[i]+detectorHalfinclPMT, theta[i], phi[i]);
         std::string name = "/labr_" + std::to_string(i);
         detector.push_back( new OCLLaBr3(histoManager, name));
-        //detector.back()->SetRotation(rot);
-        //detector.back()->SetRotation(transform[i].getRotation());
 
-        //detector.back()->SetPosition(pos);
+        //detector.back()->SetRotation(transform[i].getRotation());
         //detector.back()->SetPosition(transform[i].getTranslation());
         detector.back()->SetTransform(transform[i]);
         detector.back()->Placement(i, mother, false);
