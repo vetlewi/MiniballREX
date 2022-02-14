@@ -1,0 +1,21 @@
+{ decls }
+namespace std { inline namespace __1 {  } }
+
+[ libtrex.dylib ]
+# List of selected classes
+class Annular
+class Barrel
+class Crystal
+class Germanium
+class ParticleMC
+class TRexSettings
+class vector<Annular>
+class vector<Barrel>
+class vector<Crystal>
+class vector<Germanium>
+class vector<ParticleMC>
+header include/TRex/Annular.hh
+header include/TRex/Barrel.hh
+header include/TRex/Germanium.hh
+header include/TRex/ParticleMC.hh
+header include/TRex/TRexSettings.hh
