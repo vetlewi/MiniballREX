@@ -42,6 +42,8 @@ list(APPEND CMAKE_PREFIX_PATH $ENV{ROOTSYS})
 find_package(ROOT CONFIG REQUIRED COMPONENTS RIO Net Hist Tree MathCore Physics)
 #include("${ROOT_DIR}/modules/RootNewMacros.cmake")
 
+find_package(Threads)
+
 ##############################################
 # Create targets and set properties
 
@@ -218,3 +220,8 @@ add_executable(MiniballTRex app/TRexGeant4.cc)
 target_compile_definitions(MiniballTRex PRIVATE USE_MT=0)
 target_link_libraries(MiniballTRex miniballrex::trex miniballrex::OsloLaBr)
 target_enable_lto(MiniballTRex optimized)
+
+add_executable(TreeToCSV app/TreeToCSV.cpp)
+target_include_directories(TreeToCSV PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/external)
+target_link_libraries(TreeToCSV miniballrex::trex Threads::Threads)
+target_enable_lto(TreeToCSV optimized)
